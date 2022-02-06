@@ -4,7 +4,9 @@ const CONFIG = {
         src: '/dist',
     },
     plugins: [
-        '@snowpack/plugin-svelte'
+        '@snowpack/plugin-svelte',
+        '@snowpack/plugin-babel',
+        '@snowpack/plugin-optimize',
     ],
 }
 
