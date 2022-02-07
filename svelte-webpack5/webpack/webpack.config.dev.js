@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CONFIG = {
     mode: 'development',
     entry: {
-        main: './src/main.js'
+        main: './src/main.ts'
     },
     output: {
         path: path.resolve(__dirname, './../dist')

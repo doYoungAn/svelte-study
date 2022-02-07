@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CONFIG = {
     mode: 'production',
     entry: {
-        main: './src/main.js'
+        main: './src/main.ts'
     },
     output: {
         path: path.resolve(__dirname, './../dist')
@@ -23,6 +23,11 @@ const CONFIG = {
                 use: {
                     loader: 'svelte-loader',
                 },
+            },
+            {
+                test: /\.ts?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
             },
         ],
     },

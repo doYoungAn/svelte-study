@@ -1,5 +1,5 @@
-<script>
-    let name = '안도영';
+<script lang="ts">
+    export let name = '안도영';
 </script>
 
 <h1>Hello {name}</h1>
