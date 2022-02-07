@@ -24,6 +24,11 @@ const CONFIG = {
                     loader: 'svelte-loader',
                 },
             },
+            {
+                test: /\.ts?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ],
     },
     resolve: {
