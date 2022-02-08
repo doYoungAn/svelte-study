@@ -7,6 +7,7 @@ const CONFIG = {
         '@snowpack/plugin-svelte',
         '@snowpack/plugin-babel',
         '@snowpack/plugin-optimize',
+        '@snowpack/plugin-typescript',
     ],
 }
 

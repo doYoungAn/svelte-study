@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let name = '안도영';
 </script>
 
