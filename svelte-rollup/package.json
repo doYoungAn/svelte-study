@@ -1,0 +1,19 @@
+{
+  "name": "svelte-rollup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "rollup": "^2.67.2",
+    "rollup-plugin-svelte": "^7.1.0"
+  },
+  "dependencies": {
+    "svelte": "^3.46.4"
+  }
+}
