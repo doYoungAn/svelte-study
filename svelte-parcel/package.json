@@ -1,0 +1,16 @@
+{
+  "name": "svelte-parcel",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-svelte": "^4.0.9",
+    "svelte": "^3.46.4"
+  }
+}
