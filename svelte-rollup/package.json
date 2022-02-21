@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c"
+    "dev": "NODE_ENV=dev rollup -c",
+    "build": "NODE_ENV=prod rollup -c"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,8 @@
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@rollup/plugin-typescript": "^8.3.0",
     "rollup": "^2.67.2",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-svelte": "^7.1.0",
     "tslib": "^2.3.1",
     "typescript": "^4.5.5"

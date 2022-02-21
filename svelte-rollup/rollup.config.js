@@ -1,16 +1,25 @@
 const svelte = require('rollup-plugin-svelte');
 const typescript = require('@rollup/plugin-typescript')
+const serve = require('rollup-plugin-serve')
+const { nodeResolve } = require('@rollup/plugin-node-resolve')
+const livereload = require('rollup-plugin-livereload');
+
+const NODE_ENV = process.env.NODE_ENV;
+console.log('NODE_ENV', NODE_ENV);
 
 const CONFIG = {
     input: './src/main.ts',
     output: {
-        file: './dist/bundle.js'
+        file: './public/dist/bundle.js'
     },
     plugins: [
+        nodeResolve(),
         svelte({
             include: './src/**/*.svelte'
         }),
         typescript(),
+        NODE_ENV === 'dev' ? serve('public') : null,
+        NODE_ENV === 'dev' ? livereload({ watch: 'public' }) : null,
     ]
 }
 
