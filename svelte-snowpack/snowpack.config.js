@@ -8,6 +8,7 @@ const CONFIG = {
         '@snowpack/plugin-babel',
         '@snowpack/plugin-optimize',
         '@snowpack/plugin-typescript',
+        '@snowpack/plugin-sass',
     ],
 }
 
