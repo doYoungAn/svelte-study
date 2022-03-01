@@ -6,6 +6,7 @@
 <h1 class="example">Hello {name}</h1>
 <h1 class="example1">Hello {name}</h1>
 <ChildComponent />
+<img src="/static/sample_image.png" />
 
 <style lang="scss">
   .example {
