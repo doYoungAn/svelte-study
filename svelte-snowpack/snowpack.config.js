@@ -1,3 +1,5 @@
+const NODE_ENV = process.env.NODE_ENV;
+
 const CONFIG = {
     mount: {
         public: '/',
@@ -7,6 +9,10 @@ const CONFIG = {
             static: true,
             resolve: false,
         },
+    },
+    optimize: {
+        bundle: NODE_ENV === 'prod',
+        minify: NODE_ENV === 'prod',
     },
     plugins: [
         '@snowpack/plugin-svelte',
