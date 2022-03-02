@@ -10,9 +10,18 @@
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
     "parcel-plugin-svelte": "^4.0.9",
     "sass": "^1.49.8",
     "svelte": "^3.46.4",
     "typescript": "^4.5.5"
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "static",
+        "staticOutDir": "static"
+      }
+    ]
   }
 }
