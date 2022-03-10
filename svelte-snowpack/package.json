@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev snowpack dev",
-    "build": "NODE_ENV=prod snowpack build"
+    "dev": "NODE_ENV=dev snowpack dev --config ./snowpack.config.ts",
+    "build": "NODE_ENV=prod snowpack build --config ./snowpack.config.ts"
   },
   "author": "",
   "license": "ISC",
