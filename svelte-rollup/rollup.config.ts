@@ -1,16 +1,16 @@
-const svelte = require('rollup-plugin-svelte');
-const typescript = require('@rollup/plugin-typescript');
-const serve = require('rollup-plugin-serve');
-const { nodeResolve } = require('@rollup/plugin-node-resolve');
-const livereload = require('rollup-plugin-livereload');
-const scss = require('rollup-plugin-scss');
-const { terser } = require('rollup-plugin-terser');
-const copy = require('rollup-plugin-copy');
+import { RollupOptions } from 'rollup';
+import svelte from 'rollup-plugin-svelte';
+import typescript from '@rollup/plugin-typescript';
+import serve from 'rollup-plugin-serve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import livereload from 'rollup-plugin-livereload';
+import scss from 'rollup-plugin-scss';
+import { terser } from 'rollup-plugin-terser';
+import copy from 'rollup-plugin-copy';
 
 const NODE_ENV = process.env.NODE_ENV;
-console.log('NODE_ENV', NODE_ENV);
 
-const CONFIG = {
+const CONFIG: RollupOptions = {
     input: './src/main.ts',
     output: {
         file: './public/dist/bundle.js'
@@ -33,4 +33,4 @@ const CONFIG = {
     ]
 }
 
-module.exports = CONFIG;
+export default CONFIG;
