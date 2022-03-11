@@ -1,9 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+import { Configuration } from 'webpack';
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
-const CONFIG = {
-    mode: 'development',
+const CONFIG: Configuration = {
+    mode: 'production',
     entry: {
         main: './src/main.ts'
     },
@@ -33,12 +35,12 @@ const CONFIG = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                  // Creates `style` nodes from JS strings
-                  "style-loader",
-                  // Translates CSS into CommonJS
-                  "css-loader",
-                  // Compiles Sass to CSS
-                  "sass-loader",
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
                 ],
             },
         ],
@@ -51,6 +53,7 @@ const CONFIG = {
         },
     },
     plugins: [
+        new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './../public/index.html'),
         }),
@@ -62,4 +65,4 @@ const CONFIG = {
     ],
 }
 
-module.exports = CONFIG;
+export default CONFIG;
