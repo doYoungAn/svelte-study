@@ -5,17 +5,22 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --config ./webpack/webpack.config.dev.ts",
-    "build": "webpack --config ./webpack/webpack.config.prod.ts"
+    "build": "webpack --config ./webpack/webpack.config.prod.ts",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.0",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.6.0",
+    "eslint": "^8.11.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "prettier": "2.5.1",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
