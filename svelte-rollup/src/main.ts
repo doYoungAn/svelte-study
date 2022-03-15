@@ -2,8 +2,7 @@ import App from './App.svelte';
 import './css/global.scss';
 
 const app = new App({
-    target: document.getElementById('root')
-})
+  target: document.getElementById('root'),
+});
 
 export default app;
-
