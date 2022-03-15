@@ -8,29 +8,29 @@ import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy';
 
-const NODE_ENV = process.env.NODE_ENV;
+const { NODE_ENV } = process.env;
 
 const CONFIG: RollupOptions = {
-    input: './src/main.ts',
-    output: {
-        file: './public/dist/bundle.js'
-    },
-    plugins: [
-        nodeResolve(),
-        svelte({
-            include: './src/**/*.svelte'
-        }),
-        typescript(),
-        scss(),
-        NODE_ENV === 'dev' ? serve('public') : null,
-        NODE_ENV === 'dev' ? livereload({ watch: 'public' }) : null,
-        NODE_ENV === 'prod' ? terser() : null,
-        copy({
-            targets: [
-                { src: 'static/**', dest: 'public/static' }
-            ]
-        })
-    ]
-}
+  input: './src/main.ts',
+  output: {
+    file: './public/dist/bundle.js',
+  },
+  plugins: [
+    nodeResolve(),
+    svelte({
+      include: './src/**/*.svelte',
+    }),
+    typescript(),
+    scss(),
+    NODE_ENV === 'dev' ? serve('public') : null,
+    NODE_ENV === 'dev' ? livereload({ watch: 'public' }) : null,
+    NODE_ENV === 'prod' ? terser() : null,
+    copy({
+      targets: [
+        { src: 'static/**', dest: 'public/static' },
+      ],
+    }),
+  ],
+};
 
 export default CONFIG;
